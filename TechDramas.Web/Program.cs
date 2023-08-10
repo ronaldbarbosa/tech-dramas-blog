@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using TechDramas.Web.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Inject DbContext into the services of the aplication
+builder.Services.AddDbContext<TechDramasDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDbConnection")));
 
 var app = builder.Build();
 
