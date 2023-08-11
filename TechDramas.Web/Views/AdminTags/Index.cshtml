@@ -1,0 +1,11 @@
+﻿@model IEnumerable<TechDramas.Web.Models.Domain.Tag>;
+@{
+    ViewData["Title"] = "Admin Tags";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@foreach(var tag in Model)
+{
+    <p class="text-xl-center">@Html.DisplayFor(modelItem => tag.Name)</p>
+}

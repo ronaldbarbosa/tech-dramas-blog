@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using TechDramas.Web.Data;
+using TechDramas.Web.Repositories;
+using TechDramas.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,10 @@ builder.Services.AddControllersWithViews();
 // Inject DbContext into the services of the aplication
 builder.Services.AddDbContext<TechDramasDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDbConnection")));
+
+// Inject services and repositories
+builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<ITagService, TagService>();
 
 var app = builder.Build();
 

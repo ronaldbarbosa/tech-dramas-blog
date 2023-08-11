@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TechDramas.Web.Models.Domain;
 
-namespace TechDramas.Web.Data
+namespace TechDramas.Web.Repositories
 {
     public class TechDramasDbContext : DbContext
     {
