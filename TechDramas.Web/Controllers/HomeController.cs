@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using TechDramas.Web.Models;
+using TechDramas.Web.Models.ViewModels;
 
 namespace TechDramas.Web.Controllers
 {

@@ -1,4 +1,4 @@
-namespace TechDramas.Web.Models
+namespace TechDramas.Web.Models.ViewModels
 {
     public class ErrorViewModel
     {
